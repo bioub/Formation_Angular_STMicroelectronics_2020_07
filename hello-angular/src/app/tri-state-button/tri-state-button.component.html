@@ -1,6 +1,7 @@
-<button
+<!-- <button
   [style.backgroundColor]="states[0]"
   [class.hidden]="indexShown !== 0"
+  [ngClass]="{shown: indexShown === 0}"
   [attr.data-color]="states[0]"
   (click)="increment()"
 >
@@ -9,6 +10,7 @@
 <button
   [style.backgroundColor]="states[1]"
   [class.hidden]="indexShown !== 1"
+  [ngClass]="{shown: indexShown === 1}"
   [attr.data-color]="states[1]"
   (click)="increment()"
 >
@@ -17,8 +19,26 @@
 <button
   [style.backgroundColor]="states[2]"
   [class.hidden]="indexShown !== 2"
+  [ngClass]="{shown: indexShown === 2}"
   [attr.data-color]="states[2]"
   (click)="increment()"
 >
   {{ states[2] }}
+</button> -->
+
+<button
+  *ngFor="let el of states; index as i"
+  [style.backgroundColor]="el"
+  [class.hidden]="indexShown !== i"
+  [ngClass]="{shown: indexShown === i}"
+  [attr.data-color]="el"
+  (click)="increment()"
+>
+  {{ el }}
 </button>
+
+<!-- <ng-template [ngIf]="indexShown === 2">
+    <p>Vous avez sélectionné yellow</p>
+</ng-template> -->
+
+<p *ngIf="indexShown === 2">Vous avez sélectionné yellow</p>
