@@ -6,6 +6,7 @@ import { HelloComponent } from './hello/hello.component';
 import { ClockComponent } from './clock/clock.component';
 import { CounterComponent } from './counter/counter.component';
 import { ExerciceHelloWorldComponent } from './exercice-hello-world/exercice-hello-world.component';
+import { TriStateButtonComponent } from './tri-state-button/tri-state-button.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ExerciceHelloWorldComponent } from './exercice-hello-world/exercice-hel
     HelloComponent,
     ClockComponent,
     CounterComponent,
-    ExerciceHelloWorldComponent
+    ExerciceHelloWorldComponent,
+    TriStateButtonComponent
   ],
   imports: [
     BrowserModule

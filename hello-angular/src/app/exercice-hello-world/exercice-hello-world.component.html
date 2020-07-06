@@ -4,9 +4,9 @@
 -->
 
 <label>
-    Prénom : <input type="text" value="Romain">
+    Prénom : <input type="text" [value]="prenom" (input)="prenom = $event.target.value">
 </label>
 
 <p>
-    Bonjour Romain !
+    Bonjour {{prenom}} !
 </p>

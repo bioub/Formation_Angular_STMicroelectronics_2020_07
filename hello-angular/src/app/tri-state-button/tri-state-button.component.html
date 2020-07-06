@@ -1,0 +1,24 @@
+<button
+  [style.backgroundColor]="states[0]"
+  [class.hidden]="indexShown !== 0"
+  [attr.data-color]="states[0]"
+  (click)="increment()"
+>
+  {{ states[0] }}
+</button>
+<button
+  [style.backgroundColor]="states[1]"
+  [class.hidden]="indexShown !== 1"
+  [attr.data-color]="states[1]"
+  (click)="increment()"
+>
+  {{ states[1] }}
+</button>
+<button
+  [style.backgroundColor]="states[2]"
+  [class.hidden]="indexShown !== 2"
+  [attr.data-color]="states[2]"
+  (click)="increment()"
+>
+  {{ states[2] }}
+</button>
