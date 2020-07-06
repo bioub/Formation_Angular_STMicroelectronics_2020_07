@@ -1,0 +1,18 @@
+<!-- <button (click)="increment()">{{ count }}</button> -->
+<!-- <button (click)="$event.target.innerText = +$event.target.innerText + 1">{{ count }}</button> -->
+<!-- <button (click)="increment()" [innerText]="count"></button> -->
+
+<button (click)="increment()">{{ count }}</button>
+Step : <input type="number" [value]="step" (input)="step = +$event.target.value"  />
+
+
+
+<!--
+    const btnEl = document.createElement('button');
+    btnEl.addEventListener('click', ($event) => {
+        $event.target.innerText++;
+        
+    });
+    document.body.appendChild(btnEl);
+-->
+
