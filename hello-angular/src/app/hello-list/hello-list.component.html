@@ -9,10 +9,9 @@
 <label>
     Prénom : <input type="text" [(ngModel)]="prenom">
 </label>
-<button>+</button>
+<!-- <button (click)="addPrenom()">+</button> -->
+<button (click)="liste.push(prenom)">+</button>
 <!-- Exercice 2 : Au click de ce bouton, ajouter l'élément dans le tableau -->
 
 <!-- Exercice 1 : Boucler sur le tableau liste (pour afficher les prénoms) -->
-<p>Bonjour Romain !</p>
-<p>Bonjour Jean !</p>
-<p>Bonjour Eric !</p>
+<p *ngFor="let prenom of liste">Bonjour {{ prenom }} !</p>

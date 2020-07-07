@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tri-state-button',
@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TriStateButtonComponent implements OnInit {
 
-  states = ['blue', 'red', 'yellow'];
-
-  indexShown = 0;
+  @Input() states = ['blue', 'red', 'yellow'];
+  @Input() indexShown = 0;
 
   constructor() { }
 

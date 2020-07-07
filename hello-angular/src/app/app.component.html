@@ -1,18 +1,46 @@
 <h2>Composant Hello</h2>
 <app-hello></app-hello>
 
+<app-hello name="Toto"></app-hello>
+<app-hello [name]="'Toto'"></app-hello>
+<app-hello [name]="prenom"></app-hello>
+
 <h2>Composant Clock</h2>
 <app-clock></app-clock>
 
 <h2>Composant Counter</h2>
-<app-counter></app-counter> <!-- new CounterComponent() -->
 <app-counter></app-counter>
+<!-- new CounterComponent() -->
+<app-counter></app-counter>
+<!-- new CounterComponent() -->
 
 <h2>Exercice Hello World</h2>
 <app-exercice-hello-world></app-exercice-hello-world>
 
 <h2>Composant TriStateButton</h2>
 <app-tri-state-button></app-tri-state-button>
+<app-tri-state-button
+  [states]="['purple', 'pink', 'orange']"
+  [indexShown]="2"
+></app-tri-state-button>
 
 <h2>Exercice Liste</h2>
 <app-hello-list></app-hello-list>
+
+<h2>Composant Select</h2>
+<!-- <app-select
+  [items]="['Romain', 'Jean', 'Toto']"
+  [selected]="prenom"
+  (selectedChange)="prenom = $event"
+></app-select>
+ -->
+ <app-select
+  [items]="['Romain', 'Jean', 'Toto']"
+  [(selected)]="prenom"
+></app-select>
+
+<!-- <app-select
+  [items]="['Romain', 'Jean', 'Toto']"
+  (selectedChange)="prenom = $event"
+></app-select>
+ -->

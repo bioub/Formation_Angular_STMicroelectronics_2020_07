@@ -9,6 +9,7 @@ import { CounterComponent } from './counter/counter.component';
 import { ExerciceHelloWorldComponent } from './exercice-hello-world/exercice-hello-world.component';
 import { TriStateButtonComponent } from './tri-state-button/tri-state-button.component';
 import { HelloListComponent } from './hello-list/hello-list.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HelloListComponent } from './hello-list/hello-list.component';
     ExerciceHelloWorldComponent,
     TriStateButtonComponent,
     HelloListComponent,
+    SelectComponent,
 
     // Directive
     // Pipe

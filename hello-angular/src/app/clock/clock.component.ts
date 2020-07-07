@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-clock',
@@ -8,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ClockComponent implements OnInit {
 
   now = new Date();
+  @Input() delay = 1000;
 
   constructor() { }
 
   ngOnInit(): void {
     setInterval(() => {
       this.now = new Date();
-    }, 3000);
+    }, this.delay);
   }
 
 }
