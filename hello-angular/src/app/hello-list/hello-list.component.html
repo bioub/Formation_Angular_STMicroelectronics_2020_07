@@ -1,0 +1,18 @@
+<!-- <label>
+    Prénom : <input type="text" [value]="prenom" (input)="prenom = $event.target.value">
+</label>
+
+<label>
+    Prénom : <input type="text" [ngModel]="prenom" (ngModelChange)="prenom = $event">
+</label> -->
+
+<label>
+    Prénom : <input type="text" [(ngModel)]="prenom">
+</label>
+<button>+</button>
+<!-- Exercice 2 : Au click de ce bouton, ajouter l'élément dans le tableau -->
+
+<!-- Exercice 1 : Boucler sur le tableau liste (pour afficher les prénoms) -->
+<p>Bonjour Romain !</p>
+<p>Bonjour Jean !</p>
+<p>Bonjour Eric !</p>

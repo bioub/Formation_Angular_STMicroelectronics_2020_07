@@ -54,4 +54,11 @@
     <p>Vous avez sélectionné yellow</p>
 </ng-template>
 
-<p *ngIf="indexShown === 2">Vous avez sélectionné yellow</p>
+<p *ngIf="indexShown === 2; else other">Vous avez sélectionné yellow</p>
+
+<input #htmlInputEl value="Romain" />
+Value : {{ htmlInputEl.value }}
+
+<ng-template #other>
+  <p>Vous avez sélectionné autre</p>
+</ng-template>

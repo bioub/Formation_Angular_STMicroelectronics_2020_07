@@ -4,7 +4,19 @@
 -->
 
 <label>
-    Prénom : <input type="text" [value]="prenom" (input)="prenom = $event.target.value">
+    Prénom : <input type="text" [ngModel]="prenom" (ngModelChange)="prenom = $event">
+</label>
+
+<!--
+    [prefix]="variableEntree"
+    (prefixChange)="variableEntree = $event"
+    Dans ce cas on peut combiner comme ça :
+    [(prefix)]="variableEntree"
+    [()] BANANA IN A BOX
+-->
+
+<label>
+    Prénom : <input type="text" [(ngModel)]="prenom">
 </label>
 
 <p>
