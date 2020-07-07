@@ -1,8 +1,8 @@
 <!-- <button
+  [attr.data-color]="states[0]"
   [style.backgroundColor]="states[0]"
   [class.hidden]="indexShown !== 0"
   [ngClass]="{shown: indexShown === 0}"
-  [attr.data-color]="states[0]"
   (click)="increment()"
 >
   {{ states[0] }}
@@ -26,8 +26,21 @@
   {{ states[2] }}
 </button> -->
 
+<!-- <ng-container >
 <button
-  *ngFor="let el of states; index as i"
+  *ngIf="isLast"
+  [style.backgroundColor]="el"
+  [class.hidden]="indexShown !== i"
+  [ngClass]="{shown: indexShown === i}"
+  [attr.data-color]="el"
+  (click)="increment()"
+>
+  {{ el }}
+</button>
+</ng-container> -->
+
+<button
+  *ngFor="let el of states; index as i; last as isLast"
   [style.backgroundColor]="el"
   [class.hidden]="indexShown !== i"
   [ngClass]="{shown: indexShown === i}"
@@ -37,8 +50,8 @@
   {{ el }}
 </button>
 
-<!-- <ng-template [ngIf]="indexShown === 2">
+<ng-template [ngIf]="indexShown === 2">
     <p>Vous avez sélectionné yellow</p>
-</ng-template> -->
+</ng-template>
 
 <p *ngIf="indexShown === 2">Vous avez sélectionné yellow</p>
