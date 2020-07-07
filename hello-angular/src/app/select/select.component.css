@@ -1,0 +1,22 @@
+:host {
+    /* app-select */
+    display: block;
+    position: relative;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+.selected {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.menu {
+    border: 1px solid black;
+}
+
+/* .item[_ngcontent-cjx-c46] */
+.item {
+    padding: 5px;
+    
+}

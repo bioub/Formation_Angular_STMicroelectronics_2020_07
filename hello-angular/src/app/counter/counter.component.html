@@ -11,9 +11,9 @@ Step : <input type="number" [value]="step" (input)="step = +$event.target.value
     const btnEl = document.createElement('button');
     btnEl.addEventListener('click', ($event) => {
         $event.target.innerText++;
-        $event.preventDefault();
-        
+        $event.preventDefault(); 
     });
+    btnEl.dispatchEvent(new Event('click'));
     document.body.appendChild(btnEl);
 -->
 
