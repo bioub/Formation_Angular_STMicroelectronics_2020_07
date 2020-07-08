@@ -25,7 +25,15 @@ export class AppComponent {
     },
   ];
 
-  addTodo(todo: Todo) {
-    this.todos.push(todo);
+  addTodo(todo: Todo): void {
+    // changement immuable
+    this.todos = [...this.todos, todo];
+
+    // changement muable
+    // this.todos.push(todo);
+  }
+
+  deleteTodo(todo: Todo): void {
+    this.todos = this.todos.filter((t) => t.id !== todo.id);
   }
 }

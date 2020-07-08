@@ -1,6 +1,6 @@
 <h1>TodoList</h1>
 <todo-form (add)="addTodo($event)"></todo-form>
-<todo-list [items]="todos"></todo-list>
+<todo-list [items]="todos" (delete)="deleteTodo($event)"></todo-list>
 
 <!--
   SOLID :

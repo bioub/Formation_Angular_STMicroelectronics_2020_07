@@ -11,7 +11,7 @@ export class FormComponent {
 
   @Output() add = new EventEmitter<TodoEntity>();
 
-  handleSubmit() {
+  handleSubmit(): void {
     // remonte la référence de l'objet au parent AppComponent
     // this.todo.id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
     // this.add.emit(this.todo);
