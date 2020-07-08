@@ -1,21 +1,15 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import {  TodoEntity, Todo } from '../todo.model';
 
 @Component({
   selector: 'todo-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit {
-  todo = {
-    title: '',
-    completed: false,
-  };
+export class FormComponent {
+  todo = new TodoEntity();
 
-  @Output() add = new EventEmitter();
-
-  constructor() {}
-
-  ngOnInit(): void {}
+  @Output() add = new EventEmitter<TodoEntity>();
 
   handleSubmit() {
     // remonte la référence de l'objet au parent AppComponent
@@ -24,8 +18,8 @@ export class FormComponent implements OnInit {
 
     // remonte la copie de l'objet au parent AppComponent
     this.add.emit({
-      id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER),
       ...this.todo, // SPREAD Object
+      id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER),
     });
   }
 }
