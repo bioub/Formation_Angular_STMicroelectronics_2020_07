@@ -7,6 +7,7 @@ import { SharedModule } from "./shared/shared.module";
 import { HomeComponent } from './core/home/home.component';
 import { AboutComponent } from './core/about/about.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
+import { UsersModule } from "./users/users.module";
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    SharedModule
+    SharedModule,
+    UsersModule,
+    AppRoutingModule, // attention à la **, mettre ce module en dernier
   ],
   providers: [],
   bootstrap: [AppComponent]
