@@ -1,12 +1,6 @@
 <div class="menu">
-  <div class="item">
-    <a routerLink="123" routerLinkActive="active">Jean Dupont</a>
-  </div>
-  <div class="item">
-    <a routerLink="234" routerLinkActive="active">Eric Martin</a>
-  </div>
-  <div class="item">
-    <a routerLink="456" routerLinkActive="active">Pierre Durand</a>
+  <div class="item" *ngFor="let user of users">
+    <a [routerLink]="user.id" routerLinkActive="active">{{user.name}}</a>
   </div>
 </div>
 
