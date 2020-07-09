@@ -1,0 +1,15 @@
+@import '../../../variables.scss';
+
+nav {
+  background-color: $main-color;
+  display: flex;
+  margin-bottom: 10px;
+
+  a {
+    display: block;
+    padding: 5px;
+    margin-right: 10px;
+  }
+}
+
+

@@ -8,13 +8,15 @@ import { HomeComponent } from './core/home/home.component';
 import { AboutComponent } from './core/about/about.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { UsersModule } from "./users/users.module";
+import { TopBarComponent } from './core/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,39 @@
+@import '../../../variables.scss';
+
+.menu, .add {
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.item {
+  a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #333333;
+
+    // &, reprend le selecteur du dessus
+    // ici & === .item a
+    // .item a:hover
+    &:hover {
+      background-color: lighten($main-color, 20%);
+    }
+
+    &.active {
+      background: $main-color;
+      color: #fff;
+    }
+  }
+}
+
+.add {
+  display: block;
+  padding: 5px;
+  color: #333333;
+  text-decoration: none;
+
+  &.active {
+    background: $main-color;
+    color: #fff;
+  }
+}
