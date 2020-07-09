@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   prenom = 'Toto';
+
+  delayClock = 3000;
+  showClock = true;
+
+  handleClose() {
+    console.log('close');
+  }
 }

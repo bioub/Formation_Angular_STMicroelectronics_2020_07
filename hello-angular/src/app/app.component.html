@@ -5,9 +5,6 @@
 <app-hello [name]="'Toto'"></app-hello>
 <app-hello [name]="prenom"></app-hello>
 
-<h2>Composant Clock</h2>
-<!-- <app-clock></app-clock> -->
-
 <h2>Composant Counter</h2>
 <app-counter></app-counter>
 <!-- new CounterComponent() -->
@@ -34,13 +31,34 @@
   (selectedChange)="prenom = $event"
 ></app-select>
  -->
- <app-select
+<app-select
   [items]="['Romain', 'Jean', 'Toto']"
   [(selected)]="prenom"
 ></app-select>
+
+<ng-select
+  [items]="[{prenom: 'Romain', id: 123}, {prenom: 'Jean', id: 234}]"
+  [clearable]="false"
+  bindLabel="prenom"
+  bindValue="prenom"
+  [(ngModel)]="prenom"
+  (close)="handleClose()"
+></ng-select>
 
 <!-- <app-select
   [items]="['Romain', 'Jean', 'Toto']"
   (selectedChange)="prenom = $event"
 ></app-select>
  -->
+
+<!-- <app-select [(selected)]="prenom">
+  <app-select-option>Romain</app-option>
+  <app-select-option>Jean</app-option>
+  <app-select-option>Titi</app-option>
+</app-select> -->
+
+<h2>Composant Clock</h2>
+<app-clock [delay]="delayClock" *ngIf="showClock"></app-clock>
+
+<button (click)="showClock = !showClock">{{ showClock ? "Off" : "On" }}</button>
+<label>Delay : <input type="number" [(ngModel)]="delayClock" /></label>

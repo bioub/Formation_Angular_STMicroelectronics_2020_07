@@ -1,27 +1,39 @@
-# SpaAngular
+## Exerice Routes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+### Génération des composants
 
-## Development server
+Générer 3 composants dans le dossier `users` :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* UsersList
+* UserDetails
+* UserAdd
 
-## Code scaffolding
+Commencer à simuler la génération avec la commande de génération
+en utilisant l'option `-d`, si vous voyez que le composant se créé bien
+dans users et update `users/users.module` relancer la commande sans l'option `-d`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Créer les routes
 
-## Build
+Dans `users/users-routing.module` créer 3 routes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* URL : /users -> UsersListComponent
+* URL : /users/123 -> UserDetailsComponent
+* URL : /users/add -> UserAddComponent
 
-## Running unit tests
+### Importer UsersModule
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ Importer UsersModule dans AppModule, sinon UsersModule ne sera jamais inclus
+ dans le build et donc l'application.
 
-## Running end-to-end tests
+ ATTENTION l'ordre des modules détermine l'ordre des routes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+ Dans Angular, la première route qui match l'emporte
 
-## Further help
+ ### Ajouter des liens
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ Dans `app.component.html` mettre un lien vers la liste
+
+ Dans `users/users-list/users-list.component.html` ajouter des liens vers la
+ page details et la page add
+
+ 

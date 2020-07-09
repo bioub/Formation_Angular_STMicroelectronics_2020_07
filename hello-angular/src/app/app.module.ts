@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
@@ -28,6 +29,7 @@ import { SelectComponent } from './select/select.component';
   imports: [
     BrowserModule,
     FormsModule, // me donne accès à ngModel
+    NgSelectModule, // me donne accès à ng-select
   ],
   providers: [],
   bootstrap: [AppComponent]
