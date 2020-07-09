@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "hello-angular"
+		},
+		{
+			"path": "rappels-dom-js"
+		},
+		{
+			"path": "todo-angular"
+		},
+		{
+			"path": "spa-angular"
+		}
+	],
+	"settings": {}
+}
