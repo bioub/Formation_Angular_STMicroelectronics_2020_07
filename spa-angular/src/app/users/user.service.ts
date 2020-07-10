@@ -24,7 +24,7 @@ export class UserService {
     return of(this.users);
   }
 
-  getById(id) {
+  getById(id): Observable<any> {
     return of(this.users.find((u) => u.id === Number(id)));
   }
 }

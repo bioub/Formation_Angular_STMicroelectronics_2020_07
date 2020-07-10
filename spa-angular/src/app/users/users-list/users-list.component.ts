@@ -4,7 +4,8 @@ import { UserService } from "../user.service";
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.scss']
+  styleUrls: ['./users-list.component.scss'],
+
 })
 export class UsersListComponent implements OnInit {
 
@@ -12,7 +13,7 @@ export class UsersListComponent implements OnInit {
   // constructor(userService: UserService) {
   //   this.userService = userService;
   // }
-  users: any[];
+  users: any[] = [];
 
   constructor(private userService: UserService) {}
 
