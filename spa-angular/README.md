@@ -1,4 +1,4 @@
-## Exerice Routes
+## Exercice Routes
 
 ### Génération des composants
 
@@ -64,6 +64,8 @@ Comme pour Users, créer 3 routes imbriquées
 
 Remplir les templates avec du faux texte, si possible le HTML doit être différent de Users
 
+Ajouter les liens dans le menu top bar et le composant PostList
+
 ### Créer le service Post
 
 Générer le service PostService
@@ -72,14 +74,20 @@ Injecter HttpClient dans le constructeur
 
 Reprendre les 3 méthodes de UserHttpService (en remplacant /users par /posts )
 
+### Interface Post
+
+Créer une interface Post avec les champs: userId, id, title, body
+
+Utiliser cette interface dans votre code
+
 ### Assembler le tout
 
 Injecter PostService dans PostsList, PostDetails et PostAdd
 
-Appeler les méthodes correspondante et compléter les templates pour afficher les données.
+Appeler les méthodes correspondantes et compléter les templates pour afficher les données.
 
 
 ### (optionnel)
 
-Afficher le nom de l'utilisateur dans PostsModule plutot que son id
+Afficher le nom de l'utilisateur dans PostsModule plutot que son id dans getById
  

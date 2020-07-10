@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UserServiceInterface} from './user-service.interface';
 import { User } from './user.model';
@@ -21,6 +21,5 @@ export class UserHttpService implements UserServiceInterface {
 
   create(user) {
     return this.httpClient.post<Partial<User>>('http://jsonplaceholder.typicode.com/users', user);
-
   }
 }
