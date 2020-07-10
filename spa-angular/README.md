@@ -36,4 +36,50 @@ Dans `users/users-routing.module` créer 3 routes
  Dans `users/users-list/users-list.component.html` ajouter des liens vers la
  page details et la page add
 
+ ## Exercice Posts
+
+ En vous inspirant du module UsersModule, créer un module PostsModule en lien avec le serveur : `http://jsonplaceholder.typicode.com/posts``
+
+### Générer un module Posts
+
+Générer un module Posts avec un module de routing
+
+### Créer 4 composants
+
+Les 4 mêmes que pour Users :
+* PostsComponent
+* PostsListComponent
+* PostDetailsComponent
+* PostAddComponent
+
+### Créer les routes
+
+Comme pour Users, créer 3 routes imbriquées
+
+- /posts -> PostsComponent
+- /posts/add -> PostAddComponent en route enfant
+- /posts/:postId -> PostDetailsComponent en route enfant
+
+### Créer du Faux Texte
+
+Remplir les templates avec du faux texte, si possible le HTML doit être différent de Users
+
+### Créer le service Post
+
+Générer le service PostService
+
+Injecter HttpClient dans le constructeur
+
+Reprendre les 3 méthodes de UserHttpService (en remplacant /users par /posts )
+
+### Assembler le tout
+
+Injecter PostService dans PostsList, PostDetails et PostAdd
+
+Appeler les méthodes correspondante et compléter les templates pour afficher les données.
+
+
+### (optionnel)
+
+Afficher le nom de l'utilisateur dans PostsModule plutot que son id
  
